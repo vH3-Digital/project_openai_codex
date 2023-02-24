@@ -66,6 +66,7 @@ const handleSubmit = async (e) => {
     e.preventDefault()
 
     const data = new FormData(form)
+    
 
     // user's chatstripe
     chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
@@ -85,6 +86,8 @@ const handleSubmit = async (e) => {
 
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
+    
+    const promptText = 'rewrite this text into 3 different length social media post captions. a long 50 word, a medium 20 word and a short 10 word version: ' + data.get('prompt');
 
     const response = await fetch('https://codex-im0y.onrender.com/', {
         method: 'POST',
