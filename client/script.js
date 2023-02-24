@@ -89,7 +89,7 @@ const handleSubmit = async (e) => {
     
     const promptText = 'write 3 different length social media post captions for the following -' + data.get('prompt') + '- provide a long, a medium and a short version in a bullet list';
 
-    const response = await fetch('https://codex-im0y.onrender.com/', {
+    const response = await fetch('https://vh3-open-ai-server.onrender.com/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
