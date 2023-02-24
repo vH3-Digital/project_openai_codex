@@ -90,13 +90,14 @@ const handleSubmit = async (e) => {
     const promptText = 'write 3 different length social media post captions for the following -' + data.get('prompt') + '- provide a long, a medium and a short version in a bullet list';
 
     const response = await fetch('https://vh3-open-ai-server.onrender.com/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            prompt: data.get('prompt')
-        })
+         method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        prompt: promptText
+    })
+})
     })
 
     clearInterval(loadInterval)
